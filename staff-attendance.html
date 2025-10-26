@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Attendance | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff Directory</a></li>
+            <li><a href="staff-attendance.html" class="active"><i class="fas fa-calendar-check"></i> Staff Attendance</a></li>
+            <li><a href="staff-payroll.html"><i class="fas fa-money-check"></i> Staff Payroll</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Staff Attendance</h1>
+                <p>Track and manage staff attendance records</p>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search attendance...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Date Selector -->
+            <section class="date-section">
+                <div class="date-selector">
+                    <button class="date-nav"><i class="fas fa-chevron-left"></i></button>
+                    <div class="current-date">
+                        <h3>March 2024</h3>
+                        <p>Week 12</p>
+                    </div>
+                    <button class="date-nav"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="attendance-actions">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Mark Attendance</button>
+                    <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
+                </div>
+            </section>
+
+            <!-- Attendance Summary -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Present Today</h3>
+                        <p class="stat-number">42</p>
+                        <p class="stat-change">88% attendance rate</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon warning">
+                        <i class="fas fa-user-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Late Arrivals</h3>
+                        <p class="stat-number">5</p>
+                        <p class="stat-change">10% of staff</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon danger">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Absent Today</h3>
+                        <p class="stat-number">3</p>
+                        <p class="stat-change">6% absence rate</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>On Leave</h3>
+                        <p class="stat-number">2</p>
+                        <p class="stat-change">Approved leave</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Attendance Calendar -->
+            <section class="calendar-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>March 2024 Attendance Calendar</h3>
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <span class="legend-color present"></span>
+                                <span>Present</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color late"></span>
+                                <span>Late</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color absent"></span>
+                                <span>Absent</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color leave"></span>
+                                <span>Leave</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar headers -->
+                        <div class="calendar-header">Mon</div>
+                        <div class="calendar-header">Tue</div>
+                        <div class="calendar-header">Wed</div>
+                        <div class="calendar-header">Thu</div>
+                        <div class="calendar-header">Fri</div>
+                        <div class="calendar-header">Sat</div>
+                        <div class="calendar-header">Sun</div>
+                        
+                        <!-- Calendar days would be generated dynamically -->
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day">
+                            <span class="day-number">1</span>
+                            <div class="attendance-status present">95%</div>
+                        </div>
+                        <div class="calendar-day weekend">
+                            <span class="day-number">2</span>
+                        </div>
+                        <div class="calendar-day weekend">
+                            <span class="day-number">3</span>
+                        </div>
+                        <!-- More days would continue... -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Attendance List -->
+            <section class="attendance-list-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Today's Attendance - March 20, 2024</h3>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-sync"></i> Refresh</button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Staff Name</th>
+                                    <th>Department</th>
+                                    <th>Check-in</th>
+                                    <th>Check-out</th>
+                                    <th>Status</th>
+                                    <th>Remarks</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/staff1.jpg" alt="Staff">
+                                            <span>Mr. Johnson Ade</span>
+                                        </div>
+                                    </td>
+                                    <td>Teaching</td>
+                                    <td>07:45 AM</td>
+                                    <td>03:30 PM</td>
+                                    <td><span class="status-badge success">Present</span></td>
+                                    <td>On time</td>
+                                    <td>
+                                        <button class="btn-sm btn-secondary">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/staff2.jpg" alt="Staff">
+                                            <span>Mrs. Bola Ahmed</span>
+                                        </div>
+                                    </td>
+                                    <td>Teaching</td>
+                                    <td>08:15 AM</td>
+                                    <td>03:45 PM</td>
+                                    <td><span class="status-badge warning">Late</span></td>
+                                    <td>30 minutes late</td>
+                                    <td>
+                                        <button class="btn-sm btn-secondary">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/staff3.jpg" alt="Staff">
+                                            <span>Mr. Chukwu Emeka</span>
+                                        </div>
+                                    </td>
+                                    <td>Management</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><span class="status-badge danger">Absent</span></td>
+                                    <td>No information</td>
+                                    <td>
+                                        <button class="btn-sm btn-secondary">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/staff4.jpg" alt="Staff">
+                                            <span>Mrs. Fatima Ali</span>
+                                        </div>
+                                    </td>
+                                    <td>Administration</td>
+                                    <td>08:00 AM</td>
+                                    <td>04:00 PM</td>
+                                    <td><span class="status-badge success">Present</span></td>
+                                    <td>On time</td>
+                                    <td>
+                                        <button class="btn-sm btn-secondary">Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

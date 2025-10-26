@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Roles | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html" class="active">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>User Roles Management</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search roles...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>System Roles & Permissions</h2>
+                <button id="addRoleBtn"><i class="fas fa-plus"></i> Add Role</button>
+            </div>
+
+            <div class="page-section">
+                <div class="roles-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>System Roles</h3>
+                                <p class="stat-number">6</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Users</h3>
+                                <p class="stat-number">48</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Permissions</h3>
+                                <p class="stat-number">42</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Recent Changes</h3>
+                                <p class="stat-number">3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <div class="role-header">
+                            <div class="role-icon admin">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Administrator</h3>
+                                <p>Full system access and management capabilities</p>
+                            </div>
+                            <div class="role-users">
+                                <span class="user-count">5 users</span>
+                            </div>
+                        </div>
+                        <div class="role-permissions">
+                            <h4>Key Permissions</h4>
+                            <ul class="permissions-list">
+                                <li><i class="fas fa-check"></i> User Management</li>
+                                <li><i class="fas fa-check"></i> System Configuration</li>
+                                <li><i class="fas fa-check"></i> Data Export/Import</li>
+                                <li><i class="fas fa-check"></i> Role Management</li>
+                                <li><i class="fas fa-check"></i> All Module Access</li>
+                            </ul>
+                        </div>
+                        <div class="role-actions">
+                            <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="secondary"><i class="fas fa-users"></i> Manage Users</button>
+                            <button class="danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="role-card">
+                        <div class="role-header">
+                            <div class="role-icon teacher">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Teacher</h3>
+                                <p>Academic management and student evaluation</p>
+                            </div>
+                            <div class="role-users">
+                                <span class="user-count">35 users</span>
+                            </div>
+                        </div>
+                        <div class="role-permissions">
+                            <h4>Key Permissions</h4>
+                            <ul class="permissions-list">
+                                <li><i class="fas fa-check"></i> Student Management</li>
+                                <li><i class="fas fa-check"></i> Grade Entry</li>
+                                <li><i class="fas fa-check"></i> Attendance Tracking</li>
+                                <li><i class="fas fa-check"></i> Subject Management</li>
+                                <li><i class="fas fa-times"></i> System Settings</li>
+                            </ul>
+                        </div>
+                        <div class="role-actions">
+                            <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="secondary"><i class="fas fa-users"></i> Manage Users</button>
+                            <button class="danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="role-card">
+                        <div class="role-header">
+                            <div class="role-icon student">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Student</h3>
+                                <p>Access to personal academic information</p>
+                            </div>
+                            <div class="role-users">
+                                <span class="user-count">5 users</span>
+                            </div>
+                        </div>
+                        <div class="role-permissions">
+                            <h4>Key Permissions</h4>
+                            <ul class="permissions-list">
+                                <li><i class="fas fa-check"></i> View Personal Results</li>
+                                <li><i class="fas fa-check"></i> Access E-Learning</li>
+                                <li><i class="fas fa-check"></i> Take CBT Exams</li>
+                                <li><i class="fas fa-times"></i> Grade Management</li>
+                                <li><i class="fas fa-times"></i> User Management</li>
+                            </ul>
+                        </div>
+                        <div class="role-actions">
+                            <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="secondary"><i class="fas fa-users"></i> Manage Users</button>
+                            <button class="danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="role-card">
+                        <div class="role-header">
+                            <div class="role-icon staff">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Staff</h3>
+                                <p>Administrative and support staff access</p>
+                            </div>
+                            <div class="role-users">
+                                <span class="user-count">3 users</span>
+                            </div>
+                        </div>
+                        <div class="role-permissions">
+                            <h4>Key Permissions</h4>
+                            <ul class="permissions-list">
+                                <li><i class="fas fa-check"></i> Attendance Management</li>
+                                <li><i class="fas fa-check"></i> Report Generation</li>
+                                <li><i class="fas fa-times"></i> Academic Management</li>
+                                <li><i class="fas fa-times"></i> System Configuration</li>
+                                <li><i class="fas fa-times"></i> User Management</li>
+                            </ul>
+                        </div>
+                        <div class="role-actions">
+                            <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="secondary"><i class="fas fa-users"></i> Manage Users</button>
+                            <button class="danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-hierarchy">
+                    <h3>Role Hierarchy</h3>
+                    <div class="hierarchy-chart">
+                        <div class="hierarchy-level">
+                            <div class="level-label">Level 1</div>
+                            <div class="level-roles">
+                                <div class="hierarchy-role admin">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Administrator</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hierarchy-connector">
+                            <div class="connector-line"></div>
+                        </div>
+                        <div class="hierarchy-level">
+                            <div class="level-label">Level 2</div>
+                            <div class="level-roles">
+                                <div class="hierarchy-role teacher">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <span>Teacher</span>
+                                </div>
+                                <div class="hierarchy-role staff">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Staff</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hierarchy-connector">
+                            <div class="connector-line"></div>
+                        </div>
+                        <div class="hierarchy-level">
+                            <div class="level-label">Level 3</div>
+                            <div class="level-roles">
+                                <div class="hierarchy-role student">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addRoleBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Add Role form would open here', 'info');
+        });
+
+        // Role actions
+        document.querySelectorAll('.role-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const roleName = this.closest('.role-card').querySelector('h3').textContent;
+                if (this.querySelector('.fa-edit')) {
+                    SchoolManagement.showNotification(`Editing role: ${roleName}`, 'info');
+                } else if (this.querySelector('.fa-users')) {
+                    SchoolManagement.showNotification(`Managing users for ${roleName}`, 'info');
+                } else {
+                    if (confirm(`Delete role: ${roleName}? This action cannot be undone.`)) {
+                        SchoolManagement.showNotification(`Role ${roleName} deleted`, 'success');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

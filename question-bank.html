@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Bank | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-desktop"></i> CBT <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="cbt.html">Examinations</a></li>
+                    <li><a href="question-bank.html" class="active">Question Bank</a></li>
+                    <li><a href="test-settings.html">Test Settings</a></li>
+                    <li><a href="results.html">CBT Results</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Question Bank</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search questions...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Question Management</h2>
+                <div class="action-buttons">
+                    <button id="addQuestionBtn"><i class="fas fa-plus"></i> Add Question</button>
+                    <button id="importQuestionsBtn" class="secondary"><i class="fas fa-file-import"></i> Import</button>
+                    <button id="exportQuestionsBtn" class="secondary"><i class="fas fa-file-export"></i> Export</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="questionbank-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Questions</h3>
+                                <p class="stat-number">1,245</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Subjects</h3>
+                                <p class="stat-number">15</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Verified</h3>
+                                <p class="stat-number">1,120</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Pending Review</h3>
+                                <p class="stat-number">125</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questionbank-filters">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label>Subject:</label>
+                            <select id="subjectFilter">
+                                <option value="">All Subjects</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="english">English</option>
+                                <option value="physics">Physics</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="biology">Biology</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Class Level:</label>
+                            <select id="classFilter">
+                                <option value="">All Classes</option>
+                                <option value="jss">JSS</option>
+                                <option value="sss">SSS</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Question Type:</label>
+                            <select id="typeFilter">
+                                <option value="">All Types</option>
+                                <option value="multiple">Multiple Choice</option>
+                                <option value="truefalse">True/False</option>
+                                <option value="short">Short Answer</option>
+                                <option value="essay">Essay</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Difficulty:</label>
+                            <select id="difficultyFilter">
+                                <option value="">All Levels</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions-list">
+                    <div class="question-card">
+                        <div class="question-header">
+                            <div class="question-meta">
+                                <span class="question-id">Q001</span>
+                                <span class="question-subject mathematics">Mathematics</span>
+                                <span class="question-difficulty medium">Medium</span>
+                                <span class="question-type multiple">Multiple Choice</span>
+                            </div>
+                            <div class="question-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-copy"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="question-content">
+                            <p><strong>Question:</strong> What is the value of x in the equation 2x + 5 = 15?</p>
+                            <div class="question-options">
+                                <div class="option">
+                                    <span class="option-label">A</span>
+                                    <span class="option-text">5</span>
+                                </div>
+                                <div class="option correct">
+                                    <span class="option-label">B</span>
+                                    <span class="option-text">10</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-label">C</span>
+                                    <span class="option-text">15</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-label">D</span>
+                                    <span class="option-text">20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <div class="question-tags">
+                                <span class="tag">Algebra</span>
+                                <span class="tag">Equations</span>
+                            </div>
+                            <div class="question-stats">
+                                <span><i class="fas fa-chart-line"></i> Used: 12 times</span>
+                                <span><i class="fas fa-percentage"></i> Success: 78%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-header">
+                            <div class="question-meta">
+                                <span class="question-id">Q002</span>
+                                <span class="question-subject physics">Physics</span>
+                                <span class="question-difficulty hard">Hard</span>
+                                <span class="question-type multiple">Multiple Choice</span>
+                            </div>
+                            <div class="question-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-copy"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="question-content">
+                            <p><strong>Question:</strong> Which of the following best describes Newton's First Law of Motion?</p>
+                            <div class="question-options">
+                                <div class="option">
+                                    <span class="option-label">A</span>
+                                    <span class="option-text">F = ma</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-label">B</span>
+                                    <span class="option-text">Every action has an equal and opposite reaction</span>
+                                </div>
+                                <div class="option correct">
+                                    <span class="option-label">C</span>
+                                    <span class="option-text">An object at rest stays at rest unless acted upon</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-label">D</span>
+                                    <span class="option-text">Energy cannot be created or destroyed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <div class="question-tags">
+                                <span class="tag">Mechanics</span>
+                                <span class="tag">Laws of Motion</span>
+                            </div>
+                            <div class="question-stats">
+                                <span><i class="fas fa-chart-line"></i> Used: 8 times</span>
+                                <span><i class="fas fa-percentage"></i> Success: 65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card pending">
+                        <div class="question-header">
+                            <div class="question-meta">
+                                <span class="question-id">Q003</span>
+                                <span class="question-subject english">English</span>
+                                <span class="question-difficulty easy">Easy</span>
+                                <span class="question-type essay">Essay</span>
+                            </div>
+                            <div class="question-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-check"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="question-content">
+                            <p><strong>Question:</strong> Write a 250-word essay on the importance of education in modern society.</p>
+                            <div class="question-instructions">
+                                <p><strong>Instructions:</strong> Your essay should include an introduction, body paragraphs, and conclusion. Focus on both personal and societal benefits.</p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <div class="question-tags">
+                                <span class="tag">Essay Writing</span>
+                                <span class="tag">Education</span>
+                            </div>
+                            <div class="question-status pending">
+                                <i class="fas fa-clock"></i> Pending Review
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn disabled"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <div class="pagination-pages">
+                        <span class="pagination-page active">1</span>
+                        <span class="pagination-page">2</span>
+                        <span class="pagination-page">3</span>
+                        <span class="pagination-page">...</span>
+                        <span class="pagination-page">10</span>
+                    </div>
+                    <button class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addQuestionBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Add Question form would open here', 'info');
+        });
+
+        document.getElementById('importQuestionsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Import questions dialog would open here', 'info');
+        });
+
+        document.getElementById('exportQuestionsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Exporting questions...', 'success');
+        });
+
+        // Question actions
+        document.querySelectorAll('.question-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const questionId = this.closest('.question-card').querySelector('.question-id').textContent;
+                if (this.querySelector('.fa-edit')) {
+                    SchoolManagement.showNotification(`Editing question ${questionId}`, 'info');
+                } else if (this.querySelector('.fa-copy')) {
+                    SchoolManagement.showNotification(`Copying question ${questionId}`, 'info');
+                } else if (this.querySelector('.fa-check')) {
+                    SchoolManagement.showNotification(`Approving question ${questionId}`, 'success');
+                } else {
+                    if (confirm(`Delete question ${questionId}?`)) {
+                        SchoolManagement.showNotification(`Question ${questionId} deleted`, 'success');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

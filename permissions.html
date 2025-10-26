@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissions | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html" class="active">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Permissions Management</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search permissions...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>System Permissions</h2>
+                <div class="action-buttons">
+                    <button id="savePermissionsBtn"><i class="fas fa-save"></i> Save Changes</button>
+                    <button id="resetPermissionsBtn" class="secondary"><i class="fas fa-undo"></i> Reset to Default</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="permissions-overview">
+                    <div class="overview-stats">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Permissions</h3>
+                                    <p class="stat-number">42</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Active Permissions</h3>
+                                    <p class="stat-number">38</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Restricted</h3>
+                                    <p class="stat-number">4</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Last Updated</h3>
+                                    <p class="stat-number">Today</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="role-selector">
+                        <label>Select Role to Manage:</label>
+                        <select id="roleSelector">
+                            <option value="administrator">Administrator</option>
+                            <option value="teacher" selected>Teacher</option>
+                            <option value="student">Student</option>
+                            <option value="staff">Staff</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="permissions-matrix">
+                    <div class="matrix-header">
+                        <h3>Permission Matrix - Teacher Role</h3>
+                        <div class="matrix-actions">
+                            <button class="secondary" id="selectAllBtn">Select All</button>
+                            <button class="secondary" id="deselectAllBtn">Deselect All</button>
+                        </div>
+                    </div>
+
+                    <div class="modules-permissions">
+                        <!-- Students Module -->
+                        <div class="module-section">
+                            <div class="module-header">
+                                <h4><i class="fas fa-user-graduate"></i> Students Management</h4>
+                                <div class="module-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="permissions-grid">
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        View Students
+                                    </label>
+                                    <span class="permission-desc">Access student profiles and information</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Add Students
+                                    </label>
+                                    <span class="permission-desc">Register new students in the system</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Edit Students
+                                    </label>
+                                    <span class="permission-desc">Modify student records and information</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Delete Students
+                                    </label>
+                                    <span class="permission-desc">Remove students from the system</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academics Module -->
+                        <div class="module-section">
+                            <div class="module-header">
+                                <h4><i class="fas fa-book"></i> Academics</h4>
+                                <div class="module-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="permissions-grid">
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Enter Grades
+                                    </label>
+                                    <span class="permission-desc">Input student scores and grades</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        View Results
+                                    </label>
+                                    <span class="permission-desc">Access student academic results</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Manage Subjects
+                                    </label>
+                                    <span class="permission-desc">Add and modify subject information</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Modify Curriculum
+                                    </label>
+                                    <span class="permission-desc">Change academic curriculum structure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Attendance Module -->
+                        <div class="module-section">
+                            <div class="module-header">
+                                <h4><i class="fas fa-calendar-check"></i> Attendance</h4>
+                                <div class="module-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="permissions-grid">
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Mark Attendance
+                                    </label>
+                                    <span class="permission-desc">Record student attendance</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        View Attendance
+                                    </label>
+                                    <span class="permission-desc">Access attendance records</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Modify Attendance
+                                    </label>
+                                    <span class="permission-desc">Edit existing attendance records</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Module -->
+                        <div class="module-section">
+                            <div class="module-header">
+                                <h4><i class="fas fa-cog"></i> System Settings</h4>
+                                <div class="module-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="permissions-grid">
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        User Management
+                                    </label>
+                                    <span class="permission-desc">Manage system users and roles</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        System Configuration
+                                    </label>
+                                    <span class="permission-desc">Modify system-wide settings</span>
+                                </div>
+                                <div class="permission-item">
+                                    <label class="permission-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Database Management
+                                    </label>
+                                    <span class="permission-desc">Access and manage database</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="permission-summary">
+                    <h3>Permission Summary</h3>
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <h4>Allowed Permissions</h4>
+                            <div class="permission-count allowed">28</div>
+                            <div class="permission-list">
+                                <span>View Students</span>
+                                <span>Enter Grades</span>
+                                <span>Mark Attendance</span>
+                                <span>+25 more</span>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Restricted Permissions</h4>
+                            <div class="permission-count restricted">14</div>
+                            <div class="permission-list">
+                                <span>Delete Students</span>
+                                <span>Modify Curriculum</span>
+                                <span>User Management</span>
+                                <span>+11 more</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('savePermissionsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Permissions saved successfully!', 'success');
+        });
+
+        document.getElementById('resetPermissionsBtn').addEventListener('click', function() {
+            if (confirm('Reset all permissions to default settings?')) {
+                SchoolManagement.showNotification('Permissions reset to default', 'success');
+            }
+        });
+
+        // Module toggle functionality
+        document.querySelectorAll('.module-toggle input').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const moduleSection = this.closest('.module-section');
+                const permissions = moduleSection.querySelectorAll('.permission-label input');
+                permissions.forEach(permission => {
+                    permission.checked = this.checked;
+                });
+            });
+        });
+
+        // Select all / deselect all
+        document.getElementById('selectAllBtn').addEventListener('click', function() {
+            document.querySelectorAll('.permission-label input').forEach(checkbox => {
+                checkbox.checked = true;
+            });
+            SchoolManagement.showNotification('All permissions selected', 'info');
+        });
+
+        document.getElementById('deselectAllBtn').addEventListener('click', function() {
+            document.querySelectorAll('.permission-label input').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            SchoolManagement.showNotification('All permissions deselected', 'info');
+        });
+
+        // Role selector change
+        document.getElementById('roleSelector').addEventListener('change', function() {
+            const role = this.value;
+            SchoolManagement.showNotification(`Loading permissions for ${role} role...`, 'info');
+        });
+    </script>
+</body>
+</html>

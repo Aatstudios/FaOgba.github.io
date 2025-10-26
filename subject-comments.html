@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Comments | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="scoresheet.html">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-comment-alt"></i> Subject Comments <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="subject-comments.html" class="active">Teachers' Comments</a></li>
+                    <li><a href="principal-comments.html">Principal's Comments</a></li>
+                    <li><a href="comment-templates.html">Comment Templates</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <li><a href="broadsheet.html"><i class="fas fa-file-alt"></i> Broadsheet</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="analysis.html">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            <li><a href="cbt.html"><i class="fas fa-desktop"></i> CBT</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Subject Comments Management</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search comments...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Teachers' Comments</h2>
+                <button id="bulkCommentsBtn"><i class="fas fa-copy"></i> Bulk Comments</button>
+            </div>
+
+            <div class="page-section">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Class:</label>
+                        <select id="classFilter">
+                            <option value="">Select Class</option>
+                            <option value="JSS1A">JSS 1A</option>
+                            <option value="JSS1B">JSS 1B</option>
+                            <option value="SS3A">SS 3A</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Subject:</label>
+                        <select id="subjectFilter">
+                            <option value="">Select Subject</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="English">English</option>
+                            <option value="Physics">Physics</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Term:</label>
+                        <select id="termFilter">
+                            <option value="second">Second Term</option>
+                            <option value="first">First Term</option>
+                            <option value="third">Third Term</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="comments-interface">
+                    <div class="students-list">
+                        <h3>Students</h3>
+                        <div class="student-item active" data-student="1">
+                            <span class="student-name">Adeola Johnson</span>
+                            <span class="student-id">FA001</span>
+                        </div>
+                        <div class="student-item" data-student="2">
+                            <span class="student-name">Chinedu Okoro</span>
+                            <span class="student-id">FA002</span>
+                        </div>
+                        <div class="student-item" data-student="3">
+                            <span class="student-name">Fatima Bello</span>
+                            <span class="student-id">FA003</span>
+                        </div>
+                    </div>
+
+                    <div class="comment-editor">
+                        <h3>Comment for: <span id="current-student">Adeola Johnson</span></h3>
+                        <div class="form-group">
+                            <label>Subject Comment:</label>
+                            <textarea id="subjectComment" placeholder="Enter subject comment for this student..." rows="6">Shows excellent understanding of mathematical concepts. Consistently performs well in tests and assignments. Should maintain this good performance.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Recommendation:</label>
+                            <select id="recommendation">
+                                <option value="excellent">Excellent - Keep it up</option>
+                                <option value="good">Good - Continue to improve</option>
+                                <option value="average">Average - Needs more effort</option>
+                                <option value="poor">Poor - Requires attention</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button id="saveCommentBtn"><i class="fas fa-save"></i> Save Comment</button>
+                            <button id="nextStudentBtn" class="secondary"><i class="fas fa-arrow-right"></i> Next Student</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('saveCommentBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Comment saved successfully!', 'success');
+        });
+
+        document.getElementById('bulkCommentsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Bulk comments interface would open here', 'info');
+        });
+
+        document.getElementById('nextStudentBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Moving to next student...', 'info');
+        });
+
+        // Student selection functionality
+        document.querySelectorAll('.student-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.student-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                const studentName = this.querySelector('.student-name').textContent;
+                document.getElementById('current-student').textContent = studentName;
+            });
+        });
+    </script>
+</body>
+</html>

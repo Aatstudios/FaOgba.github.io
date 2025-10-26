@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="scoresheet.html">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            <li><a href="subject-comments.html"><i class="fas fa-comment-alt"></i> Subject Comments</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <li><a href="broadsheet.html"><i class="fas fa-file-alt"></i> Broadsheet</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="analysis.html" class="active">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            <li><a href="cbt.html"><i class="fas fa-desktop"></i> CBT</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Performance Analysis</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search analysis...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Termly Data Analysis</h2>
+                <div class="action-buttons">
+                    <button id="generateReportBtn"><i class="fas fa-file-export"></i> Generate Report</button>
+                    <button id="exportDataBtn" class="secondary"><i class="fas fa-download"></i> Export Data</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="analysis-controls">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Academic Session:</label>
+                            <select id="academicSession">
+                                <option value="2023-2024">2023/2024 Session</option>
+                                <option value="2022-2023">2022/2023 Session</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Term:</label>
+                            <select id="termSelect">
+                                <option value="second">Second Term</option>
+                                <option value="first">First Term</option>
+                                <option value="third">Third Term</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Class:</label>
+                            <select id="classSelect">
+                                <option value="all">All Classes</option>
+                                <option value="JSS1">JSS 1</option>
+                                <option value="JSS2">JSS 2</option>
+                                <option value="JSS3">JSS 3</option>
+                                <option value="SS1">SS 1</option>
+                                <option value="SS2">SS 2</option>
+                                <option value="SS3">SS 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Analysis Type:</label>
+                            <select id="analysisType">
+                                <option value="performance">Performance Analysis</option>
+                                <option value="attendance">Attendance Analysis</option>
+                                <option value="subject">Subject Analysis</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Overall Performance Trend</h3>
+                            <select class="chart-filter">
+                                <option>This Session</option>
+                                <option>Last Session</option>
+                            </select>
+                        </div>
+                        <canvas id="performanceChart" height="250"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Subject Performance</h3>
+                            <select class="chart-filter">
+                                <option>All Classes</option>
+                                <option>By Class</option>
+                            </select>
+                        </div>
+                        <canvas id="subjectChart" height="250"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Grade Distribution</h3>
+                            <select class="chart-filter">
+                                <option>Current Term</option>
+                                <option>Previous Term</option>
+                            </select>
+                        </div>
+                        <canvas id="gradeChart" height="250"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Attendance Rate</h3>
+                            <select class="chart-filter">
+                                <option>This Term</option>
+                                <option>Last Term</option>
+                            </select>
+                        </div>
+                        <canvas id="attendanceChart" height="250"></canvas>
+                    </div>
+                </div>
+
+                <div class="analysis-summary">
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <h4>Overall Average</h4>
+                            <div class="summary-value">76.8%</div>
+                            <div class="summary-change up">+2.4% from last term</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Best Performing Class</h4>
+                            <div class="summary-value">SS 3A</div>
+                            <div class="summary-change">Average: 82.3%</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Best Subject</h4>
+                            <div class="summary-value">Mathematics</div>
+                            <div class="summary-change">Average: 79.5%</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Attendance Rate</h4>
+                            <div class="summary-value">94.2%</div>
+                            <div class="summary-change up">+1.8% from last term</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-analysis">
+                    <h3>Detailed Performance Analysis</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Students</th>
+                                    <th>Average Score</th>
+                                    <th>Pass Rate</th>
+                                    <th>Top Student</th>
+                                    <th>Weakest Subject</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SS 3A</td>
+                                    <td>28</td>
+                                    <td>82.3%</td>
+                                    <td>100%</td>
+                                    <td>Adeola Johnson</td>
+                                    <td>English (75.2%)</td>
+                                    <td><span class="trend up">↑ Improving</span></td>
+                                </tr>
+                                <tr>
+                                    <td>JSS 1A</td>
+                                    <td>35</td>
+                                    <td>74.8%</td>
+                                    <td>97.1%</td>
+                                    <td>Fatima Bello</td>
+                                    <td>Mathematics (68.5%)</td>
+                                    <td><span class="trend up">↑ Improving</span></td>
+                                </tr>
+                                <tr>
+                                    <td>SS 2B</td>
+                                    <td>32</td>
+                                    <td>71.2%</td>
+                                    <td>93.8%</td>
+                                    <td>Chinedu Okoro</td>
+                                    <td>Physics (65.8%)</td>
+                                    <td><span class="trend down">↓ Declining</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Performance Trend Chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            const performanceChart = new Chart(performanceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1st Term', '2nd Term', '3rd Term', '1st Term', '2nd Term'],
+                    datasets: [{
+                        label: 'Average Score',
+                        data: [72, 74, 76, 75, 77],
+                        borderColor: '#004080',
+                        backgroundColor: 'rgba(0, 64, 128, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 60,
+                            max: 90
+                        }
+                    }
+                }
+            });
+
+            // Subject Performance Chart
+            const subjectCtx = document.getElementById('subjectChart').getContext('2d');
+            const subjectChart = new Chart(subjectCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Math', 'English', 'Physics', 'Chemistry', 'Biology', 'Geography'],
+                    datasets: [{
+                        label: 'Average Score',
+                        data: [79.5, 75.2, 72.8, 76.4, 74.1, 70.3],
+                        backgroundColor: '#00bcd4'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Grade Distribution Chart
+            const gradeCtx = document.getElementById('gradeChart').getContext('2d');
+            const gradeChart = new Chart(gradeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['A (90-100%)', 'B (80-89%)', 'C (70-79%)', 'D (60-69%)', 'F (Below 60%)'],
+                    datasets: [{
+                        data: [15, 25, 35, 20, 5],
+                        backgroundColor: ['#4caf50', '#8bc34a', '#ffc107', '#ff9800', '#f44336']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Attendance Chart
+            const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+            const attendanceChart = new Chart(attendanceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                    datasets: [{
+                        label: 'Attendance Rate',
+                        data: [92, 94, 93, 95, 96, 95],
+                        borderColor: '#4caf50',
+                        backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 85,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        });
+
+        document.getElementById('generateReportBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Generating analysis report...', 'success');
+        });
+
+        document.getElementById('exportDataBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Exporting analysis data...', 'success');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoresheet | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="scoresheet.html" class="active">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            <li><a href="subject-comments.html"><i class="fas fa-comment-alt"></i> Subject Comments</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <li><a href="broadsheet.html"><i class="fas fa-file-alt"></i> Broadsheet</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="analysis.html">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            <li><a href="cbt.html"><i class="fas fa-desktop"></i> CBT</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Scoresheet Management</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search scoresheets...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Upload or Manage Scores</h2>
+                <div class="action-buttons">
+                    <button id="newScoresheetBtn"><i class="fas fa-plus"></i> New Scoresheet</button>
+                    <button id="uploadScoresBtn" class="secondary"><i class="fas fa-upload"></i> Bulk Upload</button>
+                    <button id="downloadTemplateBtn" class="secondary"><i class="fas fa-download"></i> Download Template</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Academic Term:</label>
+                        <select id="termFilter">
+                            <option value="">All Terms</option>
+                            <option value="first">First Term</option>
+                            <option value="second">Second Term</option>
+                            <option value="third">Third Term</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Class:</label>
+                        <select id="classFilter">
+                            <option value="">All Classes</option>
+                            <option value="JSS1">JSS 1</option>
+                            <option value="JSS2">JSS 2</option>
+                            <option value="JSS3">JSS 3</option>
+                            <option value="SS1">SS 1</option>
+                            <option value="SS2">SS 2</option>
+                            <option value="SS3">SS 3</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Subject:</label>
+                        <select id="subjectFilter">
+                            <option value="">All Subjects</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="English">English</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Subject</th>
+                                <th>Term</th>
+                                <th>Session</th>
+                                <th>Entries</th>
+                                <th>Last Updated</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SS 2B</td>
+                                <td>Physics</td>
+                                <td>2nd Term</td>
+                                <td>2023/2024</td>
+                                <td>28/35</td>
+                                <td>2024-03-15</td>
+                                <td><span class="status active">Uploaded</span></td>
+                                <td class="table-actions">
+                                    <button class="secondary"><i class="fas fa-edit"></i></button>
+                                    <button class="secondary"><i class="fas fa-download"></i></button>
+                                    <button class="danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>JSS 1A</td>
+                                <td>Mathematics</td>
+                                <td>2nd Term</td>
+                                <td>2023/2024</td>
+                                <td>35/35</td>
+                                <td>2024-03-14</td>
+                                <td><span class="status active">Completed</span></td>
+                                <td class="table-actions">
+                                    <button class="secondary"><i class="fas fa-edit"></i></button>
+                                    <button class="secondary"><i class="fas fa-download"></i></button>
+                                    <button class="danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SS 3A</td>
+                                <td>Chemistry</td>
+                                <td>2nd Term</td>
+                                <td>2023/2024</td>
+                                <td>0/30</td>
+                                <td>2024-03-10</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td class="table-actions">
+                                    <button class="secondary"><i class="fas fa-edit"></i></button>
+                                    <button class="secondary"><i class="fas fa-download"></i></button>
+                                    <button class="danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('newScoresheetBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('New Scoresheet form would open here', 'info');
+        });
+
+        document.getElementById('uploadScoresBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Bulk upload functionality would open here', 'info');
+        });
+
+        document.getElementById('downloadTemplateBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Downloading scoresheet template...', 'success');
+        });
+    </script>
+</body>
+</html>

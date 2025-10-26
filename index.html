@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="scoresheet.html">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="subject-comments.html"><i class="fas fa-comment-alt"></i> Subject Comments</a></li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="broadsheet.html"><i class="fas fa-file-alt"></i> Broadsheet</a></li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="analysis.html">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="cbt.html"><i class="fas fa-desktop"></i> CBT</a></li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Dashboard Module</h1>
+                <p>New summary information about your school.</p>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Type here to search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Quick Stats Section -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Students</h3>
+                            <p class="stat-number">218</p>
+                            <p class="stat-change"><i class="fas fa-arrow-up"></i> 12% from last term</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon male">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Male Students</h3>
+                            <p class="stat-number">98</p>
+                            <p class="stat-change"><i class="fas fa-arrow-up"></i> 5% from last term</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon female">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Female Students</h3>
+                            <p class="stat-number">120</p>
+                            <p class="stat-change"><i class="fas fa-arrow-up"></i> 8% from last term</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Teachers</h3>
+                            <p class="stat-number">35</p>
+                            <p class="stat-change"><i class="fas fa-arrow-up"></i> 2 new this term</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-section">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>New student registered - Adeola Johnson</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-file-upload"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>Results uploaded for SS3 Mathematics</p>
+                                    <span class="activity-time">Yesterday</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>Low attendance alert for JSS2B</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="actions-grid">
+                            <a href="students.html" class="action-btn">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Add Student</span>
+                            </a>
+                            <a href="scoresheet.html" class="action-btn">
+                                <i class="fas fa-file-upload"></i>
+                                <span>Upload Results</span>
+                            </a>
+                            <a href="broadsheet.html" class="action-btn">
+                                <i class="fas fa-print"></i>
+                                <span>Print Broadsheet</span>
+                            </a>
+                            <a href="e-learning.html" class="action-btn">
+                                <i class="fas fa-video"></i>
+                                <span>Add E-Learning</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

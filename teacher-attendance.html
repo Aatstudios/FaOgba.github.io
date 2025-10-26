@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Attendance | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html" class="active">Attendance</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items same as previous pages -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Teacher Attendance</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search teachers...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Attendance Records</h2>
+                <div class="action-buttons">
+                    <button id="markAttendanceBtn"><i class="fas fa-check-circle"></i> Mark Attendance</button>
+                    <button id="generateReportBtn" class="secondary"><i class="fas fa-file-export"></i> Generate Report</button>
+                    <button id="importAttendanceBtn" class="secondary"><i class="fas fa-file-import"></i> Import Data</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="attendance-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Present Today</h3>
+                                <p class="stat-number">32</p>
+                                <p class="stat-change">91% Attendance</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-times"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Absent Today</h3>
+                                <p class="stat-number">3</p>
+                                <p class="stat-change">9% Absenteeism</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>This Month</h3>
+                                <p class="stat-number">94%</p>
+                                <p class="stat-change">+2% from last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Late Arrivals</h3>
+                                <p class="stat-number">2</p>
+                                <p class="stat-change">Today</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attendance-controls">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Date:</label>
+                            <input type="date" id="attendanceDate" value="2024-03-15">
+                        </div>
+                        <div class="form-group">
+                            <label>Department:</label>
+                            <select id="departmentFilter">
+                                <option value="">All Departments</option>
+                                <option value="science">Science</option>
+                                <option value="arts">Arts</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Status:</label>
+                            <select id="statusFilter">
+                                <option value="">All Status</option>
+                                <option value="present">Present</option>
+                                <option value="absent">Absent</option>
+                                <option value="late">Late</option>
+                                <option value="leave">On Leave</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Session:</label>
+                            <select id="sessionFilter">
+                                <option value="2023-2024">2023/2024</option>
+                                <option value="2022-2023">2022/2023</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attendance-table">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Teacher</th>
+                                    <th>Department</th>
+                                    <th>Time In</th>
+                                    <th>Time Out</th>
+                                    <th>Status</th>
+                                    <th>Remarks</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Mr. Okoro</strong>
+                                                <span>Mathematics</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Science</td>
+                                    <td>07:45 AM</td>
+                                    <td>03:30 PM</td>
+                                    <td><span class="status present">Present</span></td>
+                                    <td>On time</td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="secondary"><i class="fas fa-history"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Mrs. Ade</strong>
+                                                <span>English</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Arts</td>
+                                    <td>08:15 AM</td>
+                                    <td>03:45 PM</td>
+                                    <td><span class="status late">Late</span></td>
+                                    <td>15 minutes late</td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="secondary"><i class="fas fa-history"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Dr. Chukwu</strong>
+                                                <span>Physics</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Science</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><span class="status absent">Absent</span></td>
+                                    <td>Medical leave</td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="secondary"><i class="fas fa-history"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Mr. Bello</strong>
+                                                <span>Geography</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Arts</td>
+                                    <td>07:50 AM</td>
+                                    <td>03:20 PM</td>
+                                    <td><span class="status present">Present</span></td>
+                                    <td>On time</td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="secondary"><i class="fas fa-history"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="attendance-summary">
+                    <h3>Monthly Summary - March 2024</h3>
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <h4>Overall Attendance</h4>
+                            <div class="summary-value">94.2%</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 94.2%"></div>
+                            </div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Average Daily Present</h4>
+                            <div class="summary-value">33</div>
+                            <div class="summary-change">Out of 35 teachers</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Late Arrivals</h4>
+                            <div class="summary-value">8</div>
+                            <div class="summary-change">This month</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Absences</h4>
+                            <div class="summary-value">12</div>
+                            <div class="summary-change">This month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('markAttendanceBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Mark Attendance interface would open here', 'info');
+        });
+
+        document.getElementById('generateReportBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Generating attendance report...', 'success');
+        });
+
+        document.getElementById('importAttendanceBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Import attendance data dialog would open here', 'info');
+        });
+    </script>
+</body>
+</html>

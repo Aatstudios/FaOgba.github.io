@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadsheet | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="scoresheet.html">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            <li><a href="subject-comments.html"><i class="fas fa-comment-alt"></i> Subject Comments</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-file-alt"></i> Broadsheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="broadsheet.html" class="active">Generate Broadsheet</a></li>
+                    <li><a href="result-templates.html">Result Templates</a></li>
+                    <li><a href="report-cards.html">Report Cards</a></li>
+                    <li><a href="transcripts.html">Transcripts</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="analysis.html">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            <li><a href="cbt.html"><i class="fas fa-desktop"></i> CBT</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Broadsheet Generation</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search broadsheets...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Generate Broadsheet</h2>
+                <div class="action-buttons">
+                    <button id="generateBroadsheetBtn"><i class="fas fa-file-export"></i> Generate Broadsheet</button>
+                    <button id="printBroadsheetBtn" class="secondary"><i class="fas fa-print"></i> Print</button>
+                    <button id="exportBroadsheetBtn" class="secondary"><i class="fas fa-download"></i> Export PDF</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="broadsheet-controls">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Academic Session:</label>
+                            <select id="academicSession">
+                                <option value="2023-2024">2023/2024 Session</option>
+                                <option value="2022-2023">2022/2023 Session</option>
+                                <option value="2021-2022">2021/2022 Session</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Term:</label>
+                            <select id="termSelect">
+                                <option value="first">First Term</option>
+                                <option value="second" selected>Second Term</option>
+                                <option value="third">Third Term</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Class:</label>
+                            <select id="classSelect">
+                                <option value="">Select Class</option>
+                                <option value="JSS1A">JSS 1A</option>
+                                <option value="JSS1B">JSS 1B</option>
+                                <option value="SS3A" selected>SS 3A</option>
+                                <option value="SS3B">SS 3B</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Broadsheet Type:</label>
+                            <select id="broadsheetType">
+                                <option value="comprehensive">Comprehensive Broadsheet</option>
+                                <option value="summary">Summary Broadsheet</option>
+                                <option value="subject">Subject Analysis</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="broadsheet-preview">
+                    <div class="preview-header">
+                        <h3>Broadsheet Preview - SS 3A (Second Term 2023/2024)</h3>
+                        <div class="preview-actions">
+                            <button class="secondary"><i class="fas fa-sync-alt"></i> Refresh</button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="broadsheet-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">S/N</th>
+                                    <th rowspan="2">Student Name</th>
+                                    <th colspan="5">Subjects</th>
+                                    <th rowspan="2">Total</th>
+                                    <th rowspan="2">Average</th>
+                                    <th rowspan="2">Position</th>
+                                    <th rowspan="2">Grade</th>
+                                </tr>
+                                <tr>
+                                    <th>Mathematics</th>
+                                    <th>English</th>
+                                    <th>Physics</th>
+                                    <th>Chemistry</th>
+                                    <th>Biology</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Adeola Johnson</td>
+                                    <td>85</td>
+                                    <td>78</td>
+                                    <td>92</td>
+                                    <td>88</td>
+                                    <td>90</td>
+                                    <td>433</td>
+                                    <td>86.6</td>
+                                    <td>1st</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Chinedu Okoro</td>
+                                    <td>78</td>
+                                    <td>82</td>
+                                    <td>85</td>
+                                    <td>79</td>
+                                    <td>81</td>
+                                    <td>405</td>
+                                    <td>81.0</td>
+                                    <td>2nd</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Fatima Bello</td>
+                                    <td>72</td>
+                                    <td>75</td>
+                                    <td>68</td>
+                                    <td>74</td>
+                                    <td>70</td>
+                                    <td>359</td>
+                                    <td>71.8</td>
+                                    <td>3rd</td>
+                                    <td>B</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">Class Summary</td>
+                                    <td>78.3</td>
+                                    <td>78.3</td>
+                                    <td>81.7</td>
+                                    <td>80.3</td>
+                                    <td>80.3</td>
+                                    <td>399</td>
+                                    <td>79.8</td>
+                                    <td>-</td>
+                                    <td>B</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="broadsheet-summary">
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <h4>Class Average</h4>
+                            <div class="summary-value">79.8%</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Best Student</h4>
+                            <div class="summary-value">Adeola Johnson</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Best Subject</h4>
+                            <div class="summary-value">Physics</div>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Pass Rate</h4>
+                            <div class="summary-value">100%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('generateBroadsheetBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Generating broadsheet...', 'success');
+        });
+
+        document.getElementById('printBroadsheetBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Opening print dialog...', 'info');
+            window.print();
+        });
+
+        document.getElementById('exportBroadsheetBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Exporting to PDF...', 'success');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Results | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-desktop"></i> CBT <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="cbt.html">Examinations</a></li>
+                    <li><a href="question-bank.html">Question Bank</a></li>
+                    <li><a href="test-settings.html">Test Settings</a></li>
+                    <li><a href="results.html" class="active">CBT Results</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>CBT Results Analysis</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search results...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Test Results & Analytics</h2>
+                <div class="action-buttons">
+                    <button id="generateReportBtn"><i class="fas fa-file-pdf"></i> Generate Report</button>
+                    <button id="exportResultsBtn" class="secondary"><i class="fas fa-download"></i> Export Data</button>
+                    <button id="compareResultsBtn" class="secondary"><i class="fas fa-chart-bar"></i> Compare</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="results-overview">
+                    <div class="results-stats">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Attempts</h3>
+                                    <p class="stat-number">156</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Average Score</h3>
+                                    <p class="stat-number">72.8%</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Highest Score</h3>
+                                    <p class="stat-number">95%</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Pass Rate</h3>
+                                    <p class="stat-number">84%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-filters">
+                        <div class="filters">
+                            <div class="filter-group">
+                                <label>Test:</label>
+                                <select id="testFilter">
+                                    <option value="all">All Tests</option>
+                                    <option value="math-midterm" selected>Mathematics Midterm</option>
+                                    <option value="physics-test">Physics Test</option>
+                                    <option value="english-exam">English Exam</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Class:</label>
+                                <select id="classFilter">
+                                    <option value="all">All Classes</option>
+                                    <option value="ss3a" selected>SS 3A</option>
+                                    <option value="ss3b">SS 3B</option>
+                                    <option value="jss3a">JSS 3A</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Date Range:</label>
+                                <select id="dateFilter">
+                                    <option value="recent">Last 30 Days</option>
+                                    <option value="month">This Month</option>
+                                    <option value="term">This Term</option>
+                                    <option value="custom">Custom Range</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-charts">
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Score Distribution</h3>
+                            </div>
+                            <canvas id="scoreDistributionChart" height="250"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Subject Performance</h3>
+                            </div>
+                            <canvas id="subjectPerformanceChart" height="250"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Time Analysis</h3>
+                            </div>
+                            <canvas id="timeAnalysisChart" height="250"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Question Difficulty</h3>
+                            </div>
+                            <canvas id="difficultyChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-results">
+                    <h3>Detailed Results - Mathematics Midterm</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Student</th>
+                                    <th>Score</th>
+                                    <th>Percentage</th>
+                                    <th>Time Taken</th>
+                                    <th>Correct</th>
+                                    <th>Wrong</th>
+                                    <th>Skipped</th>
+                                    <th>Grade</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="student-avatar">
+                                            <img src="img/user.png" alt="Student">
+                                            <div class="student-details">
+                                                <strong>Adeola Johnson</strong>
+                                                <span>SS 3A</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>57/60</td>
+                                    <td>95%</td>
+                                    <td>48:32</td>
+                                    <td>57</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td><span class="grade A">A</span></td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-eye"></i></button>
+                                        <button class="secondary"><i class="fas fa-download"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <div class="student-avatar">
+                                            <img src="img/user.png" alt="Student">
+                                            <div class="student-details">
+                                                <strong>Chinedu Okoro</strong>
+                                                <span>SS 3A</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>52/60</td>
+                                    <td>86.7%</td>
+                                    <td>55:12</td>
+                                    <td>52</td>
+                                    <td>8</td>
+                                    <td>0</td>
+                                    <td><span class="grade B">B</span></td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-eye"></i></button>
+                                        <button class="secondary"><i class="fas fa-download"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <div class="student-avatar">
+                                            <img src="img/user.png" alt="Student">
+                                            <div class="student-details">
+                                                <strong>Fatima Bello</strong>
+                                                <span>SS 3A</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>48/60</td>
+                                    <td>80%</td>
+                                    <td>59:45</td>
+                                    <td>48</td>
+                                    <td>12</td>
+                                    <td>0</td>
+                                    <td><span class="grade B">B</span></td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-eye"></i></button>
+                                        <button class="secondary"><i class="fas fa-download"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="student-avatar">
+                                            <img src="img/user.png" alt="Student">
+                                            <div class="student-details">
+                                                <strong>Samuel Ade</strong>
+                                                <span>SS 3A</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>32/60</td>
+                                    <td>53.3%</td>
+                                    <td>42:18</td>
+                                    <td>32</td>
+                                    <td>28</td>
+                                    <td>0</td>
+                                    <td><span class="grade D">D</span></td>
+                                    <td class="table-actions">
+                                        <button class="secondary"><i class="fas fa-eye"></i></button>
+                                        <button class="secondary"><i class="fas fa-download"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="performance-insights">
+                    <h3>Performance Insights</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Top Performing Area</h4>
+                                <p>Algebra questions showed the highest success rate at 85%</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Needs Improvement</h4>
+                                <p>Geometry questions had the lowest average score (62%)</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Time Management</h4>
+                                <p>15% of students didn't complete the test within time limit</p>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Overall Trend</h4>
+                                <p>Class average improved by 8% compared to last test</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Score Distribution Chart
+            const scoreCtx = document.getElementById('scoreDistributionChart').getContext('2d');
+            const scoreChart = new Chart(scoreCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'],
+                    datasets: [{
+                        label: 'Number of Students',
+                        data: [2, 8, 25, 45, 76],
+                        backgroundColor: '#004080'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Subject Performance Chart
+            const subjectCtx = document.getElementById('subjectPerformanceChart').getContext('2d');
+            const subjectChart = new Chart(subjectCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Algebra', 'Geometry', 'Calculus', 'Statistics'],
+                    datasets: [{
+                        data: [35, 20, 25, 20],
+                        backgroundColor: ['#004080', '#00bcd4', '#4caf50', '#ff9800']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Time Analysis Chart
+            const timeCtx = document.getElementById('timeAnalysisChart').getContext('2d');
+            const timeChart = new Chart(timeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Q1-5', 'Q6-10', 'Q11-15', 'Q16-20', 'Q21-25', 'Q26-30'],
+                    datasets: [{
+                        label: 'Average Time (seconds)',
+                        data: [45, 38, 52, 48, 55, 62],
+                        borderColor: '#004080',
+                        backgroundColor: 'rgba(0, 64, 128, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Difficulty Chart
+            const difficultyCtx = document.getElementById('difficultyChart').getContext('2d');
+            const difficultyChart = new Chart(difficultyCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Easy', 'Medium', 'Hard', 'Very Hard'],
+                    datasets: [{
+                        label: 'Success Rate',
+                        data: [92, 78, 65, 45],
+                        backgroundColor: 'rgba(0, 64, 128, 0.2)',
+                        borderColor: '#004080',
+                        pointBackgroundColor: '#004080'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        });
+
+        document.getElementById('generateReportBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Generating comprehensive report...', 'success');
+        });
+
+        document.getElementById('exportResultsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Exporting results data...', 'success');
+        });
+
+        document.getElementById('compareResultsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Opening comparison tool...', 'info');
+        });
+
+        // Result actions
+        document.querySelectorAll('.table-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const studentName = this.closest('tr').querySelector('strong').textContent;
+                if (this.querySelector('.fa-eye')) {
+                    SchoolManagement.showNotification(`Viewing detailed results for ${studentName}`, 'info');
+                } else {
+                    SchoolManagement.showNotification(`Downloading report for ${studentName}`, 'success');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

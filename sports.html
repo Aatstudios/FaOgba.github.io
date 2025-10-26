@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html" class="active">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Sports Management</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search sports...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Sports Activities</h2>
+                <button id="addSportBtn"><i class="fas fa-plus"></i> Add Sport</button>
+            </div>
+
+            <div class="page-section">
+                <div class="sports-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active Sports</h3>
+                                <p class="stat-number">8</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Student Athletes</h3>
+                                <p class="stat-number">156</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Competitions</h3>
+                                <p class="stat-number">12</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Upcoming Events</h3>
+                                <p class="stat-number">3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sports-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="all">All Sports</button>
+                        <button class="tab-btn" data-category="team">Team Sports</button>
+                        <button class="tab-btn" data-category="individual">Individual Sports</button>
+                        <button class="tab-btn" data-category="indoor">Indoor Sports</button>
+                    </div>
+
+                    <div class="sports-grid">
+                        <div class="sport-card" data-category="team">
+                            <div class="sport-image">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="sport-info">
+                                <h3>Football</h3>
+                                <p>School football team with inter-house competitions</p>
+                                <div class="sport-meta">
+                                    <span><i class="fas fa-users"></i> 45 Players</span>
+                                    <span><i class="fas fa-trophy"></i> 2 Teams</span>
+                                    <span><i class="fas fa-clock"></i> Mon, Wed, Fri</span>
+                                </div>
+                                <div class="coach-info">
+                                    <strong>Coach:</strong> Mr. Johnson
+                                </div>
+                            </div>
+                            <div class="sport-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="sport-card" data-category="team">
+                            <div class="sport-image">
+                                <i class="fas fa-basketball-ball"></i>
+                            </div>
+                            <div class="sport-info">
+                                <h3>Basketball</h3>
+                                <p>Boys and girls basketball teams</p>
+                                <div class="sport-meta">
+                                    <span><i class="fas fa-users"></i> 28 Players</span>
+                                    <span><i class="fas fa-trophy"></i> 2 Teams</span>
+                                    <span><i class="fas fa-clock"></i> Tue, Thu</span>
+                                </div>
+                                <div class="coach-info">
+                                    <strong>Coach:</strong> Mrs. Williams
+                                </div>
+                            </div>
+                            <div class="sport-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="sport-card" data-category="individual">
+                            <div class="sport-image">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="sport-info">
+                                <h3>Athletics</h3>
+                                <p>Track and field events</p>
+                                <div class="sport-meta">
+                                    <span><i class="fas fa-users"></i> 35 Athletes</span>
+                                    <span><i class="fas fa-trophy"></i> Multiple Events</span>
+                                    <span><i class="fas fa-clock"></i> Daily</span>
+                                </div>
+                                <div class="coach-info">
+                                    <strong>Coach:</strong> Mr. Adeyemi
+                                </div>
+                            </div>
+                            <div class="sport-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="sport-card" data-category="indoor">
+                            <div class="sport-image">
+                                <i class="fas fa-chess"></i>
+                            </div>
+                            <div class="sport-info">
+                                <h3>Chess Club</h3>
+                                <p>Strategic board games and competitions</p>
+                                <div class="sport-meta">
+                                    <span><i class="fas fa-users"></i> 22 Members</span>
+                                    <span><i class="fas fa-trophy"></i> 1 Team</span>
+                                    <span><i class="fas fa-clock"></i> Friday</span>
+                                </div>
+                                <div class="coach-info">
+                                    <strong>Coach:</strong> Mr. Bello
+                                </div>
+                            </div>
+                            <div class="sport-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-competitions">
+                    <h3>Upcoming Competitions</h3>
+                    <div class="competitions-list">
+                        <div class="competition-item">
+                            <div class="competition-date">
+                                <span class="date-day">24</span>
+                                <span class="date-month">MAR</span>
+                            </div>
+                            <div class="competition-details">
+                                <h4>Inter-house Sports Competition</h4>
+                                <p>Annual sports competition between school houses</p>
+                                <div class="competition-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> School Field</span>
+                                    <span><i class="fas fa-clock"></i> 8:00 AM - 4:00 PM</span>
+                                    <span><i class="fas fa-users"></i> All Students</span>
+                                </div>
+                            </div>
+                            <div class="competition-status upcoming">
+                                Upcoming
+                            </div>
+                        </div>
+                        <div class="competition-item">
+                            <div class="competition-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">APR</span>
+                            </div>
+                            <div class="competition-details">
+                                <h4>Zonal Basketball Championship</h4>
+                                <p>Regional basketball competition</p>
+                                <div class="competition-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> City Stadium</span>
+                                    <span><i class="fas fa-clock"></i> 9:00 AM - 2:00 PM</span>
+                                    <span><i class="fas fa-users"></i> Basketball Team</span>
+                                </div>
+                            </div>
+                            <div class="competition-status upcoming">
+                                Upcoming
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sports-facilities">
+                    <h3>Sports Facilities</h3>
+                    <div class="facilities-grid">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="facility-info">
+                                <h4>Football Field</h4>
+                                <p>Standard size football pitch with grass surface</p>
+                                <span class="facility-status available">Available</span>
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-basketball-ball"></i>
+                            </div>
+                            <div class="facility-info">
+                                <h4>Basketball Court</h2>
+                                <p>Outdoor basketball court with floodlights</p>
+                                <span class="facility-status available">Available</span>
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="facility-info">
+                                <h4>Running Track</h4>
+                                <p>400m synthetic running track</p>
+                                <span class="facility-status maintenance">Under Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addSportBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Add Sport form would open here', 'info');
+        });
+
+        // Sport category filtering
+        document.querySelectorAll('.category-tabs .tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const sports = document.querySelectorAll('.sport-card');
+                
+                sports.forEach(sport => {
+                    if (category === 'all' || sport.getAttribute('data-category') === category) {
+                        sport.style.display = 'block';
+                    } else {
+                        sport.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Sport actions
+        document.querySelectorAll('.sport-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const sportName = this.closest('.sport-card').querySelector('h3').textContent;
+                if (this.querySelector('.fa-edit')) {
+                    SchoolManagement.showNotification(`Editing ${sportName}`, 'info');
+                } else if (this.querySelector('.fa-users')) {
+                    SchoolManagement.showNotification(`Viewing players for ${sportName}`, 'info');
+                } else {
+                    if (confirm(`Delete ${sportName}?`)) {
+                        SchoolManagement.showNotification(`${sportName} deleted`, 'success');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

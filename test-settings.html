@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Settings | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-desktop"></i> CBT <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="cbt.html">Examinations</a></li>
+                    <li><a href="question-bank.html">Question Bank</a></li>
+                    <li><a href="test-settings.html" class="active">Test Settings</a></li>
+                    <li><a href="results.html">CBT Results</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Test Configuration</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search settings...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Test Settings & Configuration</h2>
+                <button id="saveSettingsBtn"><i class="fas fa-save"></i> Save Settings</button>
+            </div>
+
+            <div class="page-section">
+                <div class="settings-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="general">General Settings</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                        <button class="tab-btn" data-tab="appearance">Appearance</button>
+                        <button class="tab-btn" data-tab="notifications">Notifications</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- General Settings Tab -->
+                        <div class="tab-pane active" id="general">
+                            <div class="settings-group">
+                                <h3>Test Duration & Timing</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Default Test Duration (minutes)</label>
+                                        <input type="number" value="60" min="5" max="180">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time Warning (minutes before end)</label>
+                                        <input type="number" value="5" min="1" max="15">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Question Settings</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Questions Per Page</label>
+                                        <select>
+                                            <option value="1">1 Question</option>
+                                            <option value="5" selected>5 Questions</option>
+                                            <option value="10">10 Questions</option>
+                                            <option value="all">All Questions</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Default Question Order</label>
+                                        <select>
+                                            <option value="sequential">Sequential</option>
+                                            <option value="random" selected>Random</option>
+                                            <option value="difficulty">By Difficulty</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Allow question navigation
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Show question numbers
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Scoring & Grading</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Points Per Question</label>
+                                        <input type="number" value="1" min="0.5" max="10" step="0.5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Negative Marking</label>
+                                        <select>
+                                            <option value="0">No Negative Marking</option>
+                                            <option value="0.25">-25% for wrong answer</option>
+                                            <option value="0.33">-33% for wrong answer</option>
+                                            <option value="0.5">-50% for wrong answer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Passing Percentage</label>
+                                    <input type="number" value="50" min="0" max="100">
+                                    <span class="input-suffix">%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Tab -->
+                        <div class="tab-pane" id="security">
+                            <div class="settings-group">
+                                <h3>Access Control</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Require login to start test
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        IP Address restriction
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Prevent multiple sessions
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Browser Security</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Full-screen mode required
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Disable right-click
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Prevent copy-paste
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Webcam monitoring
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Time Restrictions</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Test Availability Start</label>
+                                        <input type="datetime-local" value="2024-03-20T08:00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Test Availability End</label>
+                                        <input type="datetime-local" value="2024-03-20T18:00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appearance Tab -->
+                        <div class="tab-pane" id="appearance">
+                            <div class="settings-group">
+                                <h3>Theme & Layout</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Color Theme</label>
+                                        <select>
+                                            <option value="default" selected>Default Blue</option>
+                                            <option value="dark">Dark Mode</option>
+                                            <option value="green">Green</option>
+                                            <option value="purple">Purple</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Font Size</label>
+                                        <select>
+                                            <option value="small">Small</option>
+                                            <option value="medium" selected>Medium</option>
+                                            <option value="large">Large</option>
+                                            <option value="xlarge">Extra Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Test Interface</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Show progress bar
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Show timer
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Show question marks
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Show instructions page
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Tab -->
+                        <div class="tab-pane" id="notifications">
+                            <div class="settings-group">
+                                <h3>Email Notifications</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Send test start reminders
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Send completion notifications
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Send results to students
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>System Alerts</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Low question bank alerts
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Test completion alerts
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Technical issue alerts
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-preview">
+                    <h3>Test Interface Preview</h3>
+                    <div class="preview-window">
+                        <div class="preview-header">
+                            <div class="preview-timer">
+                                <i class="fas fa-clock"></i>
+                                <span>59:45</span>
+                            </div>
+                            <div class="preview-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span>9/20 Questions</span>
+                            </div>
+                        </div>
+                        <div class="preview-content">
+                            <div class="preview-question">
+                                <h4>Question 9</h4>
+                                <p>What is the capital city of Nigeria?</p>
+                                <div class="preview-options">
+                                    <div class="preview-option">
+                                        <span class="option-label">A</span>
+                                        <span class="option-text">Lagos</span>
+                                    </div>
+                                    <div class="preview-option selected">
+                                        <span class="option-label">B</span>
+                                        <span class="option-text">Abuja</span>
+                                    </div>
+                                    <div class="preview-option">
+                                        <span class="option-label">C</span>
+                                        <span class="option-text">Kano</span>
+                                    </div>
+                                    <div class="preview-option">
+                                        <span class="option-label">D</span>
+                                        <span class="option-text">Port Harcourt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-footer">
+                            <button class="preview-nav-btn">Previous</button>
+                            <button class="preview-nav-btn primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('saveSettingsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Settings saved successfully!', 'success');
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-buttons .tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and panes
+                document.querySelectorAll('.tab-buttons .tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding tab pane
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Preview interaction
+        document.querySelectorAll('.preview-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.preview-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>

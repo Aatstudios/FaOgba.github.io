@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Events | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html" class="active">School Events</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>School Events Calendar</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search events...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Events Management</h2>
+                <div class="action-buttons">
+                    <button id="addEventBtn"><i class="fas fa-plus"></i> Add Event</button>
+                    <button id="calendarViewBtn" class="secondary"><i class="fas fa-calendar-alt"></i> Calendar View</button>
+                    <button id="exportEventsBtn" class="secondary"><i class="fas fa-download"></i> Export</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="events-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Upcoming Events</h3>
+                                <p class="stat-number">8</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>This Month</h3>
+                                <p class="stat-number">5</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Completed</h3>
+                                <p class="stat-number">12</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Require Attention</h3>
+                                <p class="stat-number">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="events-view">
+                    <div class="view-tabs">
+                        <button class="tab-btn active" data-view="upcoming">Upcoming Events</button>
+                        <button class="tab-btn" data-view="past">Past Events</button>
+                        <button class="tab-btn" data-view="all">All Events</button>
+                    </div>
+
+                    <div class="events-list">
+                        <div class="event-card" data-status="upcoming">
+                            <div class="event-date">
+                                <span class="date-day">24</span>
+                                <span class="date-month">MAR</span>
+                                <span class="date-year">2024</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Inter-house Sports Competition</h3>
+                                <p>Annual sports competition between school houses featuring various athletic events</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 8:00 AM - 4:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> School Field</span>
+                                    <span><i class="fas fa-users"></i> All Students & Staff</span>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="event-tag sports">Sports</span>
+                                    <span class="event-tag mandatory">Mandatory</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="secondary"><i class="fas fa-eye"></i> View</button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="event-status upcoming">
+                                <i class="fas fa-clock"></i>
+                                Upcoming
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-status="upcoming">
+                            <div class="event-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">APR</span>
+                                <span class="date-year">2024</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Cultural Day Celebration</h3>
+                                <p>Showcasing diverse cultural heritage through traditional attire, food, and performances</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 9:00 AM - 2:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> School Hall</span>
+                                    <span><i class="fas fa-users"></i> All Students</span>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="event-tag cultural">Cultural</span>
+                                    <span class="event-tag optional">Optional</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="secondary"><i class="fas fa-eye"></i> View</button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="event-status upcoming">
+                                <i class="fas fa-clock"></i>
+                                Upcoming
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-status="past">
+                            <div class="event-date">
+                                <span class="date-day">14</span>
+                                <span class="date-month">FEB</span>
+                                <span class="date-year">2024</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Valentine's Day Charity Drive</h3>
+                                <p>Annual charity event to support local orphanages and less privileged</p>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 10:00 AM - 1:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> School Premises</span>
+                                    <span><i class="fas fa-users"></i> Volunteer Students</span>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="event-tag charity">Charity</span>
+                                    <span class="event-tag completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="secondary"><i class="fas fa-chart-bar"></i> Report</button>
+                                <button class="secondary"><i class="fas fa-redo"></i> Repeat</button>
+                            </div>
+                            <div class="event-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Completed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="events-calendar-preview">
+                    <h3>March 2024 Calendar</h3>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">
+                            <div class="calendar-nav">
+                                <button class="calendar-prev"><i class="fas fa-chevron-left"></i></button>
+                                <span class="calendar-month">March 2024</span>
+                                <button class="calendar-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days">
+                            <!-- Calendar days would be generated dynamically -->
+                            <div class="calendar-day other-month">25</div>
+                            <div class="calendar-day other-month">26</div>
+                            <div class="calendar-day other-month">27</div>
+                            <div class="calendar-day other-month">28</div>
+                            <div class="calendar-day other-month">29</div>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day event-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                            <div class="calendar-day other-month">1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addEventBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Add Event form would open here', 'info');
+        });
+
+        document.getElementById('calendarViewBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Switching to calendar view', 'info');
+        });
+
+        document.getElementById('exportEventsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Exporting events data...', 'success');
+        });
+
+        // Event view tabs
+        document.querySelectorAll('.view-tabs .tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.getAttribute('data-view');
+                const events = document.querySelectorAll('.event-card');
+                
+                events.forEach(event => {
+                    if (view === 'all') {
+                        event.style.display = 'flex';
+                    } else {
+                        event.style.display = event.getAttribute('data-status') === view ? 'flex' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Event actions
+        document.querySelectorAll('.event-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const eventName = this.closest('.event-card').querySelector('h3').textContent;
+                if (this.querySelector('.fa-edit')) {
+                    SchoolManagement.showNotification(`Editing ${eventName}`, 'info');
+                } else if (this.querySelector('.fa-eye')) {
+                    SchoolManagement.showNotification(`Viewing ${eventName} details`, 'info');
+                } else if (this.querySelector('.fa-trash')) {
+                    if (confirm(`Delete ${eventName}?`)) {
+                        SchoolManagement.showNotification(`${eventName} deleted`, 'success');
+                    }
+                } else if (this.querySelector('.fa-chart-bar')) {
+                    SchoolManagement.showNotification(`Generating report for ${eventName}`, 'info');
+                } else if (this.querySelector('.fa-redo')) {
+                    SchoolManagement.showNotification(`Repeating ${eventName}`, 'info');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

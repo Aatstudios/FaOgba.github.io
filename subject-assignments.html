@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Assignments | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html" class="active">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Subject Allocation</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search allocations...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Teacher Subject Assignments</h2>
+                <button id="assignSubjectBtn"><i class="fas fa-link"></i> Assign Subject</button>
+            </div>
+
+            <div class="page-section">
+                <div class="allocation-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Subjects</h3>
+                                <p class="stat-number">18</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Assigned Teachers</h3>
+                                <p class="stat-number">35</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Complete Allocation</h3>
+                                <p class="stat-number">16</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Pending Allocation</h3>
+                                <p class="stat-number">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="allocation-filters">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label>Level:</label>
+                            <select id="levelFilter">
+                                <option value="">All Levels</option>
+                                <option value="jss">JSS</option>
+                                <option value="sss">SSS</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Department:</label>
+                            <select id="deptFilter">
+                                <option value="">All Departments</option>
+                                <option value="science">Science</option>
+                                <option value="arts">Arts</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Status:</label>
+                            <select id="allocationStatus">
+                                <option value="">All Status</option>
+                                <option value="assigned">Assigned</option>
+                                <option value="unassigned">Unassigned</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subject-allocation-grid">
+                    <div class="allocation-card">
+                        <div class="subject-info">
+                            <h3>Mathematics</h3>
+                            <p>Core Subject - All Classes</p>
+                            <div class="subject-meta">
+                                <span><i class="fas fa-graduation-cap"></i> JSS 1 - SS 3</span>
+                                <span><i class="fas fa-clock"></i> 5 periods/week</span>
+                            </div>
+                        </div>
+                        <div class="teacher-allocation">
+                            <div class="assigned-teachers">
+                                <div class="teacher-item">
+                                    <div class="teacher-avatar">
+                                        <img src="img/user.png" alt="Teacher">
+                                        <div class="teacher-details">
+                                            <strong>Mr. Okoro</strong>
+                                            <span>SS 1-3</span>
+                                        </div>
+                                    </div>
+                                    <div class="allocation-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="danger"><i class="fas fa-unlink"></i></button>
+                                    </div>
+                                </div>
+                                <div class="teacher-item">
+                                    <div class="teacher-avatar">
+                                        <img src="img/user.png" alt="Teacher">
+                                        <div class="teacher-details">
+                                            <strong>Mrs. Johnson</strong>
+                                            <span>JSS 1-3</span>
+                                        </div>
+                                    </div>
+                                    <div class="allocation-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="danger"><i class="fas fa-unlink"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="allocation-status complete">
+                            <i class="fas fa-check-circle"></i>
+                            Fully Allocated
+                        </div>
+                    </div>
+
+                    <div class="allocation-card">
+                        <div class="subject-info">
+                            <h3>Physics</h3>
+                            <p>Science Department - SS Classes</p>
+                            <div class="subject-meta">
+                                <span><i class="fas fa-graduation-cap"></i> SS 1 - SS 3</span>
+                                <span><i class="fas fa-clock"></i> 6 periods/week</span>
+                            </div>
+                        </div>
+                        <div class="teacher-allocation">
+                            <div class="assigned-teachers">
+                                <div class="teacher-item">
+                                    <div class="teacher-avatar">
+                                        <img src="img/user.png" alt="Teacher">
+                                        <div class="teacher-details">
+                                            <strong>Dr. Chukwu</strong>
+                                            <span>SS 1-3</span>
+                                        </div>
+                                    </div>
+                                    <div class="allocation-actions">
+                                        <button class="secondary"><i class="fas fa-edit"></i></button>
+                                        <button class="danger"><i class="fas fa-unlink"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="allocation-status complete">
+                            <i class="fas fa-check-circle"></i>
+                            Fully Allocated
+                        </div>
+                    </div>
+
+                    <div class="allocation-card pending">
+                        <div class="subject-info">
+                            <h3>French Language</h3>
+                            <p>Elective Subject</p>
+                            <div class="subject-meta">
+                                <span><i class="fas fa-graduation-cap"></i> JSS 1 - SS 3</span>
+                                <span><i class="fas fa-clock"></i> 3 periods/week</span>
+                            </div>
+                        </div>
+                        <div class="teacher-allocation">
+                            <div class="no-teacher">
+                                <i class="fas fa-user-times"></i>
+                                <div class="teacher-details">
+                                    <strong>No Teacher Assigned</strong>
+                                    <span>This subject needs a teacher</span>
+                                </div>
+                            </div>
+                            <div class="allocation-actions">
+                                <button class="primary"><i class="fas fa-link"></i> Assign Teacher</button>
+                            </div>
+                        </div>
+                        <div class="allocation-status pending">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Needs Allocation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workload-summary">
+                    <h3>Teacher Workload Summary</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Teacher</th>
+                                    <th>Subjects</th>
+                                    <th>Classes</th>
+                                    <th>Periods/Week</th>
+                                    <th>Workload</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Mr. Okoro</strong>
+                                                <span>Mathematics</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Mathematics</td>
+                                    <td>SS 1-3</td>
+                                    <td>25</td>
+                                    <td>
+                                        <div class="workload-bar">
+                                            <div class="workload-fill" style="width: 83%"></div>
+                                        </div>
+                                        <span>83%</span>
+                                    </td>
+                                    <td><span class="status optimal">Optimal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Mrs. Ade</strong>
+                                                <span>English</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>English Language</td>
+                                    <td>JSS 1-3, SS 1</td>
+                                    <td>28</td>
+                                    <td>
+                                        <div class="workload-bar">
+                                            <div class="workload-fill high" style="width: 93%"></div>
+                                        </div>
+                                        <span>93%</span>
+                                    </td>
+                                    <td><span class="status high">High</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teacher-avatar">
+                                            <img src="img/user.png" alt="Teacher">
+                                            <div class="teacher-details">
+                                                <strong>Dr. Chukwu</strong>
+                                                <span>Physics</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Physics</td>
+                                    <td>SS 1-3</td>
+                                    <td>18</td>
+                                    <td>
+                                        <div class="workload-bar">
+                                            <div class="workload-fill" style="width: 60%"></div>
+                                        </div>
+                                        <span>60%</span>
+                                    </td>
+                                    <td><span class="status low">Available</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('assignSubjectBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Subject Assignment interface would open here', 'info');
+        });
+
+        document.querySelectorAll('.allocation-card .primary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const subjectName = this.closest('.allocation-card').querySelector('h3').textContent;
+                SchoolManagement.showNotification(`Assigning teacher to ${subjectName}`, 'info');
+            });
+        });
+
+        document.querySelectorAll('.allocation-card .danger').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const teacherName = this.closest('.teacher-item').querySelector('strong').textContent;
+                const subjectName = this.closest('.allocation-card').querySelector('h3').textContent;
+                if (confirm(`Remove ${teacherName} from ${subjectName}?`)) {
+                    SchoolManagement.showNotification(`Teacher removed from subject`, 'success');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

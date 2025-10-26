@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="students.html">All Students</a></li>
+                    <li><a href="students.html?filter=new">New Admissions</a></li>
+                    <li><a href="students.html?filter=graduating">Graduating Students</a></li>
+                    <li><a href="students.html?filter=boarding">Boarding Students</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard"></i> Classrooms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="classrooms.html">All Classrooms</a></li>
+                    <li><a href="classrooms.html?level=jss">JSS Classes</a></li>
+                    <li><a href="classrooms.html?level=sss">SSS Classes</a></li>
+                    <li><a href="class-assignments.html">Class Assignments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="teachers.html">All Teachers</a></li>
+                    <li><a href="teachers.html?filter=subject">By Subject</a></li>
+                    <li><a href="teachers.html?filter=class">Class Teachers</a></li>
+                    <li><a href="teacher-attendance.html">Attendance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Subjects <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="subjects.html">All Subjects</a></li>
+                    <li><a href="subjects.html?level=jss">JSS Subjects</a></li>
+                    <li><a href="subjects.html?level=sss">SSS Subjects</a></li>
+                    <li><a href="subject-assignments.html">Subject Allocation</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Scoresheet <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="scoresheet.html">Manage Scores</a></li>
+                    <li><a href="scoresheet.html?term=first">First Term</a></li>
+                    <li><a href="scoresheet.html?term=second">Second Term</a></li>
+                    <li><a href="scoresheet.html?term=third">Third Term</a></li>
+                </ul>
+            </li>
+            <li><a href="subject-comments.html"><i class="fas fa-comment-alt"></i> Subject Comments</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <li><a href="broadsheet.html"><i class="fas fa-file-alt"></i> Broadsheet</a></li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-laptop"></i> E-Learning <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="e-learning.html">Courses</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="resources.html">Learning Resources</a></li>
+                    <li><a href="online-classes.html">Online Classes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-chart-bar"></i> Analysis <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="analysis.html">Performance Analysis</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="statistics.html">Statistics</a></li>
+                    <li><a href="trends.html">Trend Analysis</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-desktop"></i> CBT <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="cbt.html" class="active">Examinations</a></li>
+                    <li><a href="question-bank.html">Question Bank</a></li>
+                    <li><a href="test-settings.html">Test Settings</a></li>
+                    <li><a href="results.html">CBT Results</a></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html">User Activity</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Computer Based Testing</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search exams...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Examinations Management</h2>
+                <div class="action-buttons">
+                    <button id="createExamBtn"><i class="fas fa-plus"></i> Create Exam</button>
+                    <button id="scheduleExamBtn" class="secondary"><i class="fas fa-calendar-plus"></i> Schedule Exam</button>
+                    <button id="importQuestionsBtn" class="secondary"><i class="fas fa-file-import"></i> Import Questions</button>
+                </div>
+            </div>
+
+            <div class="page-section">
+                <div class="cbt-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active Exams</h3>
+                                <p class="stat-number">8</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Questions</h3>
+                                <p class="stat-number">1,245</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Completed Tests</h3>
+                                <p class="stat-number">156</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Avg. Score</h3>
+                                <p class="stat-number">72.8%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exams-tabs">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-tab="active">Active Exams</button>
+                        <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+                        <button class="tab-btn" data-tab="completed">Completed</button>
+                        <button class="tab-btn" data-tab="draft">Drafts</button>
+                    </div>
+
+                    <div class="exams-list">
+                        <div class="exam-card active" data-status="active">
+                            <div class="exam-header">
+                                <h3>Mathematics - Second Term Examination</h3>
+                                <span class="exam-status active">Active</span>
+                            </div>
+                            <div class="exam-details">
+                                <div class="exam-info">
+                                    <span><i class="fas fa-users"></i> SS 3A, SS 3B</span>
+                                    <span><i class="fas fa-clock"></i> 2 hours</span>
+                                    <span><i class="fas fa-question-circle"></i> 60 Questions</span>
+                                </div>
+                                <div class="exam-progress">
+                                    <div class="progress-info">
+                                        <span>Completed: 24/35 students</span>
+                                        <span class="progress-percent">68%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 68%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exam-actions">
+                                <button class="secondary"><i class="fas fa-eye"></i> Monitor</button>
+                                <button class="secondary"><i class="fas fa-chart-bar"></i> Results</button>
+                                <button class="danger"><i class="fas fa-stop"></i> End Exam</button>
+                            </div>
+                        </div>
+
+                        <div class="exam-card upcoming" data-status="upcoming">
+                            <div class="exam-header">
+                                <h3>Physics - Mock Examination</h3>
+                                <span class="exam-status upcoming">Starts: Mar 28, 10:00 AM</span>
+                            </div>
+                            <div class="exam-details">
+                                <div class="exam-info">
+                                    <span><i class="fas fa-users"></i> SS 3A</span>
+                                    <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                                    <span><i class="fas fa-question-circle"></i> 50 Questions</span>
+                                </div>
+                                <div class="exam-schedule">
+                                    <span><i class="fas fa-calendar"></i> Scheduled for March 28, 2024</span>
+                                </div>
+                            </div>
+                            <div class="exam-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="secondary"><i class="fas fa-copy"></i> Duplicate</button>
+                                <button class="danger"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+
+                        <div class="exam-card completed" data-status="completed">
+                            <div class="exam-header">
+                                <h3>English Language - First Term</h3>
+                                <span class="exam-status completed">Completed</span>
+                            </div>
+                            <div class="exam-details">
+                                <div class="exam-info">
+                                    <span><i class="fas fa-users"></i> JSS 2A, JSS 2B</span>
+                                    <span><i class="fas fa-clock"></i> 1 hour</span>
+                                    <span><i class="fas fa-question-circle"></i> 40 Questions</span>
+                                </div>
+                                <div class="exam-results">
+                                    <span><i class="fas fa-chart-line"></i> Average Score: 75.2%</span>
+                                    <span><i class="fas fa-user-check"></i> 68/70 students completed</span>
+                                </div>
+                            </div>
+                            <div class="exam-actions">
+                                <button class="secondary"><i class="fas fa-chart-bar"></i> View Results</button>
+                                <button class="secondary"><i class="fas fa-download"></i> Export</button>
+                                <button class="secondary"><i class="fas fa-redo"></i> Reuse</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions-section">
+                    <h3>Quick Actions</h3>
+                    <div class="quick-actions-grid">
+                        <a href="question-bank.html" class="quick-action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="action-info">
+                                <h4>Question Bank</h4>
+                                <p>Manage and organize test questions</p>
+                            </div>
+                        </a>
+                        <a href="test-settings.html" class="quick-action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="action-info">
+                                <h4>Test Settings</h4>
+                                <p>Configure exam parameters</p>
+                            </div>
+                        </a>
+                        <a href="results.html" class="quick-action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="action-info">
+                                <h4>Results Analysis</h4>
+                                <p>View and analyze test results</p>
+                            </div>
+                        </a>
+                        <a href="#" class="quick-action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="action-info">
+                                <h4>Student Portal</h4>
+                                <p>Access student testing interface</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('createExamBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Create Exam form would open here', 'info');
+        });
+
+        document.getElementById('scheduleExamBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Schedule Exam interface would open here', 'info');
+        });
+
+        document.getElementById('importQuestionsBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Import Questions dialog would open here', 'info');
+        });
+
+        // Exam tabs functionality
+        document.querySelectorAll('.category-tabs .tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const tab = this.getAttribute('data-tab');
+                const exams = document.querySelectorAll('.exam-card');
+                
+                exams.forEach(exam => {
+                    if (tab === 'active') {
+                        exam.style.display = 'block';
+                    } else {
+                        exam.style.display = exam.getAttribute('data-status') === tab ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs & Societies | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="menu-item has-submenu active">
+                <a href="#"><i class="fas fa-music"></i> Non-Academics <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu active">
+                    <li><a href="non-academics.html">Activities</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="clubs.html" class="active">Clubs & Societies</a></li>
+                    <li><a href="events.html">School Events</a></li>
+                </ul>
+            </li>
+            <!-- Rest of menu items -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>Clubs & Societies</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search clubs...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="page-actions">
+                <h2>Student Clubs & Societies</h2>
+                <button id="addClubBtn"><i class="fas fa-plus"></i> Add Club</button>
+            </div>
+
+            <div class="page-section">
+                <div class="clubs-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Clubs</h3>
+                                <p class="stat-number">12</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Club Members</h3>
+                                <p class="stat-number">245</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Club Advisors</h3>
+                                <p class="stat-number">15</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Weekly Meetings</h3>
+                                <p class="stat-number">18</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clubs-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="all">All Clubs</button>
+                        <button class="tab-btn" data-category="academic">Academic</button>
+                        <button class="tab-btn" data-category="arts">Arts & Culture</button>
+                        <button class="tab-btn" data-category="service">Service</button>
+                        <button class="tab-btn" data-category="special">Special Interest</button>
+                    </div>
+
+                    <div class="clubs-grid">
+                        <div class="club-card" data-category="academic">
+                            <div class="club-image">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="club-info">
+                                <h3>Science Club</h3>
+                                <p>Exploring scientific concepts through experiments and projects</p>
+                                <div class="club-meta">
+                                    <span><i class="fas fa-users"></i> 35 Members</span>
+                                    <span><i class="fas fa-user-tie"></i> Mr. Okoro</span>
+                                    <span><i class="fas fa-clock"></i> Wednesdays</span>
+                                </div>
+                                <div class="club-activities">
+                                    <span class="activity-tag">Experiments</span>
+                                    <span class="activity-tag">Projects</span>
+                                    <span class="activity-tag">Competitions</span>
+                                </div>
+                            </div>
+                            <div class="club-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="club-card" data-category="arts">
+                            <div class="club-image">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="club-info">
+                                <h3>Music & Drama Club</h3>
+                                <p>Developing musical and theatrical talents</p>
+                                <div class="club-meta">
+                                    <span><i class="fas fa-users"></i> 28 Members</span>
+                                    <span><i class="fas fa-user-tie"></i> Mrs. Ade</span>
+                                    <span><i class="fas fa-clock"></i> Fridays</span>
+                                </div>
+                                <div class="club-activities">
+                                    <span class="activity-tag">Choir</span>
+                                    <span class="activity-tag">Drama</span>
+                                    <span class="activity-tag">Performances</span>
+                                </div>
+                            </div>
+                            <div class="club-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="club-card" data-category="academic">
+                            <div class="club-image">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="club-info">
+                                <h3>ICT Club</h3>
+                                <p>Technology enthusiasts exploring programming and digital skills</p>
+                                <div class="club-meta">
+                                    <span><i class="fas fa-users"></i> 42 Members</span>
+                                    <span><i class="fas fa-user-tie"></i> Mr. Chukwu</span>
+                                    <span><i class="fas fa-clock"></i> Tuesdays</span>
+                                </div>
+                                <div class="club-activities">
+                                    <span class="activity-tag">Coding</span>
+                                    <span class="activity-tag">Robotics</span>
+                                    <span class="activity-tag">Web Design</span>
+                                </div>
+                            </div>
+                            <div class="club-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="club-card" data-category="service">
+                            <div class="club-image">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="club-info">
+                                <h3>Community Service Club</h3>
+                                <p>Engaging in community development and volunteer work</p>
+                                <div class="club-meta">
+                                    <span><i class="fas fa-users"></i> 38 Members</span>
+                                    <span><i class="fas fa-user-tie"></i> Mrs. Bello</span>
+                                    <span><i class="fas fa-clock"></i> Saturdays</span>
+                                </div>
+                                <div class="club-activities">
+                                    <span class="activity-tag">Volunteering</span>
+                                    <span class="activity-tag">Outreach</span>
+                                    <span class="activity-tag">Fundraising</span>
+                                </div>
+                            </div>
+                            <div class="club-actions">
+                                <button class="secondary"><i class="fas fa-edit"></i></button>
+                                <button class="secondary"><i class="fas fa-users"></i></button>
+                                <button class="danger"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="club-meetings">
+                    <h3>Upcoming Club Meetings</h3>
+                    <div class="meetings-list">
+                        <div class="meeting-item">
+                            <div class="meeting-date">
+                                <span class="date-day">20</span>
+                                <span class="date-month">MAR</span>
+                            </div>
+                            <div class="meeting-details">
+                                <h4>Science Club Meeting</h4>
+                                <p>Chemistry experiments demonstration</p>
+                                <div class="meeting-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Science Lab</span>
+                                    <span><i class="fas fa-clock"></i> 3:00 PM - 4:30 PM</span>
+                                    <span><i class="fas fa-user-tie"></i> Mr. Okoro</span>
+                                </div>
+                            </div>
+                            <div class="meeting-actions">
+                                <button class="secondary"><i class="fas fa-eye"></i> View</button>
+                                <button class="secondary"><i class="fas fa-edit"></i> Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="meeting-item">
+                            <div class="meeting-date">
+                                <span class="date-day">22</span>
+                                <span class="date-month">MAR</span>
+                            </div>
+                            <div class="meeting-details">
+                                <h4>ICT Club Workshop</h4>
+                                <p>Introduction to web development</p>
+                                <div class="meeting-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Computer Lab</span>
+                                    <span><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</span>
+                                    <span><i class="fas fa-user-tie"></i> Mr. Chukwu</span>
+                                </div>
+                            </div>
+                            <div class="meeting-actions">
+                                <button class="secondary"><i class="fas fa-eye"></i> View</button>
+                                <button class="secondary"><i class="fas fa-edit"></i> Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="club-leadership">
+                    <h3>Club Leadership</h3>
+                    <div class="leadership-grid">
+                        <div class="leader-card">
+                            <div class="leader-avatar">
+                                <img src="img/user.png" alt="Leader">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Adeola Johnson</h4>
+                                <p>President - Science Club</p>
+                                <span class="leader-class">SS 3A</span>
+                            </div>
+                        </div>
+                        <div class="leader-card">
+                            <div class="leader-avatar">
+                                <img src="img/user.png" alt="Leader">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Chinedu Okoro</h4>
+                                <p>President - ICT Club</p>
+                                <span class="leader-class">SS 2B</span>
+                            </div>
+                        </div>
+                        <div class="leader-card">
+                            <div class="leader-avatar">
+                                <img src="img/user.png" alt="Leader">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Fatima Bello</h4>
+                                <p>President - Music Club</p>
+                                <span class="leader-class">JSS 3A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addClubBtn').addEventListener('click', function() {
+            SchoolManagement.showNotification('Add Club form would open here', 'info');
+        });
+
+        // Club category filtering
+        document.querySelectorAll('.category-tabs .tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const clubs = document.querySelectorAll('.club-card');
+                
+                clubs.forEach(club => {
+                    if (category === 'all' || club.getAttribute('data-category') === category) {
+                        club.style.display = 'block';
+                    } else {
+                        club.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Club actions
+        document.querySelectorAll('.club-actions button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const clubName = this.closest('.club-card').querySelector('h3').textContent;
+                if (this.querySelector('.fa-edit')) {
+                    SchoolManagement.showNotification(`Editing ${clubName}`, 'info');
+                } else if (this.querySelector('.fa-users')) {
+                    SchoolManagement.showNotification(`Viewing members for ${clubName}`, 'info');
+                } else {
+                    if (confirm(`Delete ${clubName}?`)) {
+                        SchoolManagement.showNotification(`${clubName} deleted`, 'success');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

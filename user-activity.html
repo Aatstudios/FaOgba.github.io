@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Activity | Faith Academy Ogba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpg" alt="FA Logo">
+            <h2>FA OGBA</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            
+            <li class="menu-item has-submenu">
+                <a href="#"><i class="fas fa-users"></i> Users <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                <ul class="submenu">
+                    <li><a href="users.html">All Users</a></li>
+                    <li><a href="user-roles.html">User Roles</a></li>
+                    <li><a href="permissions.html">Permissions</a></li>
+                    <li><a href="user-activity.html" class="active">User Activity</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1>User Activity</h1>
+                <p>Monitor and track user activities across the system</p>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search user activity...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                    <span>Yekini Damilola</span>
+                    <img src="img/user.png" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label>Date Range</label>
+                        <select>
+                            <option>Today</option>
+                            <option>Last 7 days</option>
+                            <option selected>Last 30 days</option>
+                            <option>Last 3 months</option>
+                            <option>Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>User Type</label>
+                        <select>
+                            <option>All Users</option>
+                            <option>Teachers</option>
+                            <option>Administrators</option>
+                            <option>Students</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Activity Type</label>
+                        <select>
+                            <option>All Activities</option>
+                            <option>Login/Logout</option>
+                            <option>Data Entry</option>
+                            <option>File Upload</option>
+                            <option>Report Generation</option>
+                        </select>
+                    </div>
+                    <button class="filter-btn"><i class="fas fa-filter"></i> Apply Filters</button>
+                </div>
+            </section>
+
+            <!-- Activity Log -->
+            <section class="activity-log-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>User Activity Log</h3>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
+                            <button class="btn btn-secondary"><i class="fas fa-print"></i> Print</button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Activity</th>
+                                    <th>Module</th>
+                                    <th>IP Address</th>
+                                    <th>Timestamp</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/user1.jpg" alt="User">
+                                            <span>Mr. Johnson Ade</span>
+                                        </div>
+                                    </td>
+                                    <td>Logged in</td>
+                                    <td>Authentication</td>
+                                    <td>192.168.1.105</td>
+                                    <td>2024-03-20 08:30:15</td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/user2.jpg" alt="User">
+                                            <span>Mrs. Bola Ahmed</span>
+                                        </div>
+                                    </td>
+                                    <td>Uploaded student results</td>
+                                    <td>Scoresheet</td>
+                                    <td>192.168.1.112</td>
+                                    <td>2024-03-20 09:15:22</td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/user3.jpg" alt="User">
+                                            <span>Admin User</span>
+                                        </div>
+                                    </td>
+                                    <td>Added new student</td>
+                                    <td>Students</td>
+                                    <td>192.168.1.101</td>
+                                    <td>2024-03-20 10:45:33</td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/user4.jpg" alt="User">
+                                            <span>Mr. Chukwu Emeka</span>
+                                        </div>
+                                    </td>
+                                    <td>Failed login attempt</td>
+                                    <td>Authentication</td>
+                                    <td>192.168.1.108</td>
+                                    <td>2024-03-20 11:20:18</td>
+                                    <td><span class="status-badge warning">Failed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="img/user5.jpg" alt="User">
+                                            <span>Mrs. Fatima Ali</span>
+                                        </div>
+                                    </td>
+                                    <td>Generated report</td>
+                                    <td>Analysis</td>
+                                    <td>192.168.1.115</td>
+                                    <td>2024-03-20 14:30:45</td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <div class="pagination">
+                            <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                            <span class="page-info">Page 1 of 5</span>
+                            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Statistics -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Active Users Today</h3>
+                        <p class="stat-number">24</p>
+                        <p class="stat-change"><i class="fas fa-arrow-up"></i> 15% from yesterday</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Logins</h3>
+                        <p class="stat-number">156</p>
+                        <p class="stat-change"><i class="fas fa-arrow-up"></i> 8% this week</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Failed Attempts</h3>
+                        <p class="stat-number">7</p>
+                        <p class="stat-change"><i class="fas fa-arrow-down"></i> 3% from last week</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Avg. Session Time</h3>
+                        <p class="stat-number">42m</p>
+                        <p class="stat-change"><i class="fas fa-arrow-up"></i> 5m longer</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
